@@ -1,0 +1,43 @@
+<div class="cont" [ngClass]="[isMobile ? 'mobile' : '']">
+    <div class="specialist_info">
+        @if (!isMobile) {
+            <div class="avatar"></div>
+        }
+        <div class="info">
+            @if (isMobile) {
+                <div class="avatar"></div>
+            }
+            <div class="specialist">
+                <span class="sp_name"> {{ specialist.name }}</span> 
+                @if (!isMobile) {
+                    .
+                }
+                <span class="sp_specialisation"> {{ specialist.specialisation }}</span>
+            </div>
+            @if (!isMobile) {
+                <div class="clinic">
+                    <div class="icon"></div>
+                    <div class="info">
+                        <div class="name"> {{ specialist.clinicName }} </div>
+                        <div class="address"> {{ specialist.clinicAddress }} </div>
+                    </div>
+                </div>
+            }
+        </div>
+        @if (isMobile) {
+            <div class="clinic">
+                <div class="info">
+                    <div class="name"> {{ specialist.clinicName }} </div>
+                    <div class="address"> {{ specialist.clinicAddress }} </div>
+                </div>
+            </div>
+        }
+    </div>
+    <div class="specialist_time">
+        <div class="container">
+            @for (slot of specialist.timeSlots; track $index) {
+                <app-time-box [startTime]="slot.startDate" [endTime]="slot.endDate"></app-time-box>
+            }
+        </div>
+    </div>
+</div>

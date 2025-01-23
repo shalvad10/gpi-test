@@ -1,0 +1,9 @@
+<div class="cont" [ngClass]="[isMobile ? 'mobile' : '']" (click)="switchLanguage()">
+    <div class="img" [ngClass]="[selectedLang]"></div>
+    @if (!isMobile) {
+        <div class="text">
+            <span>{{selectedLang}}</span>
+        </div>
+    }
+    <div class="v_line"></div>
+</div>

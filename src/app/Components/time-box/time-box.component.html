@@ -1,0 +1,8 @@
+<div class="cont" [ngClass]="[boxSelected ? 'selected' : '']" (click)="toggleBox()">
+    <span>
+        {{startTime}} - {{endTime}}
+    </span>
+    @if (boxSelected) {
+        <div class="selected_icon"> </div>
+    }
+</div>

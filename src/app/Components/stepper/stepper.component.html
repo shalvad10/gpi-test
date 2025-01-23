@@ -1,0 +1,7 @@
+<ol class="stepper" [ngClass]="[isMobile ? 'mobile' : '']">
+  @for (step of steps; track $index) {
+    <li [ngClass]="[currentStep == step ? 'active' : currentStep > step ? 'passed' : '']" (click)="changeStep(step)">
+      {{step}}
+    </li>
+  }
+</ol>

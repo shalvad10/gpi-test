@@ -1,0 +1,9 @@
+<div class="input-wrapper">
+  <label for="first" [ngClass]="!selectedValue ? 'hide' : ''">პირადი ან პოლისის ნომერი</label>
+  <select [(ngModel)]="selectedValue" (change)="onSelect($event)">
+    <option [value]="null" disabled selected *ngIf="!selectedValue">{{ placeholder }}</option>
+    <option *ngFor="let option of options" [value]="option.value">
+      {{ option.label }}
+    </option>
+  </select>
+</div>

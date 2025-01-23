@@ -1,0 +1,24 @@
+.cont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 176px;
+    height: 46px;
+    border-radius: 12px;
+    background-color: #FFF;
+    color: #292562;
+    border: 1px solid #DEE0E8;
+    cursor: pointer;
+    .icon {
+        width: 16px;
+        height: 16px;
+        background-image: url('/calendar-cursor.svg');
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    .text {
+        padding-left: 8px;
+        font-size: 14px;
+    }
+}

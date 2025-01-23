@@ -1,0 +1,7 @@
+<div class="cont" [ngClass]="[isSelected ? 'selected' : '']" (click)="toggleSelection()">
+    <span class="dayName">{{ date.dayName }}</span>
+    <span class="dayTime">{{ date.dayNum }} {{ date.monthName }}</span>
+    @if (isSelected) {
+        <div class="selectedDot"></div>
+    }
+</div>

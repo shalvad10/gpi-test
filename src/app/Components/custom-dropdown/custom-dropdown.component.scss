@@ -1,0 +1,31 @@
+.input-wrapper {
+  position: relative;
+}
+
+select {
+  border: 1px solid #9199B4;
+  position: relative;
+  width: 100%;
+  height: 46px;
+  margin: 10px;
+  border-radius: 8px;
+  color: #292562;
+  padding-left: 15px;
+  &:focus-visible {
+    outline: none;
+  }
+}
+
+label {
+  position: absolute;
+  top: 0.2ex;
+  z-index: 1;
+  left: 2em;
+  background-color: white;
+  color: #9199B4;
+  padding: 0 5px;
+  font-size: 12px;
+  &.hide {
+    display: none;
+  }
+}

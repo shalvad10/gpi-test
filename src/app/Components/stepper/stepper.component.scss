@@ -1,0 +1,73 @@
+
+.stepper {
+  --default-b: #E9E8EF;
+  --default-c: black;
+  --line-c: #22A336;
+  --active-b: #ED1C7C;
+  --active-c: white;
+  --circle: 35px;
+  --b: 1px;
+
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  background: 
+    linear-gradient(var(--line-c) 0 0) no-repeat
+    50% calc((var(--circle) - var(--b))/2)/100% var(--b);
+  counter-reset: step;
+  width: 100%;
+  padding: 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  counter-reset: step;
+  overflow: hidden;
+
+  &.mobile {
+    width: 85vw;
+  }
+
+  li {
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+    gap: 5px;
+    font-family: sans-serif;
+    position: relative;
+    &.passed {
+      &::before {
+        background: var(--line-c);
+      }
+    }
+    &::before {
+      content: counter(step) " ";
+      counter-increment: step;
+      display: grid;
+      place-content: center;
+      aspect-ratio: 1;
+      height: var(--circle);
+      border: 5px solid #fff;
+      box-sizing: border-box;
+      background: var(--active-b);
+      color: var(--active-c);
+      border-radius: 50%;
+      font-family: monospace;
+      z-index: 1;
+    }
+  }
+
+}
+
+ol.stepper li.active ~ li::before{
+  background: var(--default-b);
+  color: var(--default-c);
+}
+ol.stepper li.active::after {
+  content: "";
+  position: absolute;
+  height: var(--b);
+  right: 100%;
+  top: calc((var(--circle) - var(--b))/2);
+  width: 100vw;
+  background: var(--line-c);
+}

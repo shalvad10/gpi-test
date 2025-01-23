@@ -1,0 +1,64 @@
+<div class="cont" [ngClass]="[isMobile ? 'mobile' : '']">
+    <div class="cont-item">
+        <div class="icon" [ngClass]="[state.result]"></div>
+        <div class="title">
+            <span>
+               {{ state.title }}
+            </span>
+        </div>
+        <div class="sub_title">
+            <span>
+                {{ state.sub_title }}
+            </span>
+        </div>
+        @if (state.result == 'success') {
+            <div class="content">
+                <div class="doctor">
+                    <div class="title">
+                        <span> ექიმი </span>
+                    </div>
+                    <div class="name">
+                        <span>{{ state.details.doctor.name }}</span> . <span>{{ state.details.doctor.specialisation }}</span>
+                    </div>
+                </div>
+                <div class="clinic">
+                    <div class="title">
+                        <span> კლინიკა </span>
+                    </div>
+                    <div class="address">
+                        <div>{{ state.details.clinic.name }}</div>
+                        <div>{{ state.details.clinic.address }}</div>
+                    </div>
+                </div>
+                <div class="visitTime">
+                    <div class="visitIcon"></div>
+                    <div class="visitInfo">
+                        <div class="visitTitle">ვიზიტის დრო</div>
+                        <div class="visitDate">{{ state.details.visitTime.startTime }} - {{ state.details.visitTime.endTime }} {{ state.details.visitTime.day }} </div>
+                    </div>
+                </div>
+                <div class="patient">
+                    <div class="patientBox">
+                        <div class="patientIcon details"></div>
+                        <div class="patientInfo">
+                            <div class="patientTitle">დაზღვეული</div>
+                            <div class="patientData">{{ state.details.patient.name }} {{ state.details.patient.policeNumber }}</div>
+                        </div>
+                    </div>
+                    <div class="patientBox">
+                        <div class="patientIcon details"></div>
+                        <div class="patientInfo">
+                            <div class="patientTitle">საკონტაქტო</div>
+                            <div class="patientData">{{ state.details.patient.number }} {{ state.details.patient.mail }}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+        <div class="buttons">
+            @for (btn of state.buttons; track $index) {
+                <div class="btn" [ngClass]="btn.type">{{ btn.text }}</div>
+            }
+        </div>
+    </div>
+</div>

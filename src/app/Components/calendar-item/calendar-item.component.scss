@@ -1,0 +1,35 @@
+.cont {
+    width: 82px;
+    height: 82px;
+    border-radius: 14px;
+    border: 1px solid #DEE0E8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    cursor: pointer;
+
+    &.selected {
+        border-color: #ED1C7C;
+        .dayName, .dayTime {
+            color: #ED1C7C;
+        }
+    }
+    .dayName {
+        font-size: 14px;
+        color: #9199B4;
+    }
+    .dayTime {
+        font-size: 16px;
+        color: #292562;
+    }
+    .selectedDot {
+        width: 6px;
+        height: 6px;
+        border-radius: 100%;
+        background-color: #ED1C7C;
+        position: absolute;
+        bottom: -10px;
+    }
+}

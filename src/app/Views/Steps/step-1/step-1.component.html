@@ -1,0 +1,39 @@
+<div class="cont">
+    <div class="heading">
+        <span>
+            ᲕᲘᲡᲘ ᲩᲐᲬᲔᲠᲐ ᲒᲡᲣᲠᲡ?
+        </span>
+    </div>
+    <div class="rows">
+        <div class="row double">
+            <div class="left">
+                <app-custom-radio></app-custom-radio>
+            </div>
+            <div class="right">
+                <app-custom-radio></app-custom-radio>
+            </div>
+        </div>
+        @if (!forOther) {
+            <div class="row full">
+                <app-custom-input></app-custom-input>
+            </div>
+            <div class="row divider">
+                <div class="left">
+                    <span> ან აირჩიე სიიდან </span>
+                </div>
+                <div class="right"></div>
+            </div>
+        } @else {
+            <div class="row full">
+                <span class="title"> მიუთითე დაზღვეულის მონაცემები </span>
+                <app-custom-input></app-custom-input>
+                <app-custom-input></app-custom-input>
+            </div>
+        }
+        <div class="row full">
+            <span class="title"> აირჩიეთ ვისი ჩაწერა გსურთ </span>
+            <app-custom-radio></app-custom-radio>
+            <app-custom-radio></app-custom-radio>
+        </div>
+    </div>
+</div>

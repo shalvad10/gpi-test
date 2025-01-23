@@ -1,0 +1,34 @@
+@if (!withIcon && !clinicData) {
+    <div class="cont">
+        <input type="radio" [name]="id" [id]="id">
+        <div class="labels">
+            <label [for]="id"> პირადი ექიმის კონსულტაცია </label>
+            @if (secondaryText) {
+                <span>OPPMED 5029382/20</span>
+            }
+        </div>
+    </div>    
+}
+@if (withIcon) {
+    <div class="cont withIcon">
+        <div class="data">
+            <div class="icon" [ngClass]="[iconName]"></div>
+            <label [for]="id"> პირადი ექიმის კონსულტაცია </label>
+        </div>
+        <input type="radio" [name]="id" [id]="id">
+    </div>
+}
+@if (clinicData) {
+    <div class="cont clinicData">
+        <div class="data">
+            <div class="img" [ngStyle]="{'background-image': 'url(' + clinicData.img+ ')' }"></div>
+            <div class="labels">
+                <label [for]="id"> {{clinicData.name}} </label>
+                @if (secondaryText) {
+                    <span>{{clinicData.address}}</span>
+                }
+            </div>
+        </div>
+        <input type="radio" [name]="id" [id]="id">
+    </div>
+}

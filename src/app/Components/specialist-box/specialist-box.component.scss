@@ -1,0 +1,104 @@
+.cont {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    border-radius: 12px;
+    border: 1px solid #DEE0E8;
+    box-shadow: 0px 5px 15px #E9E8EF80;
+    padding: 10px;
+    box-sizing: border-box;
+    margin: 8px 0px;
+    .specialist_info {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        .avatar {
+            width: 70px;
+            height: 70px;
+            border-radius: 100%;
+            background-image: url('/test_avatar.png');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .info {
+            margin-left: 10px;
+            .specialist {
+                .sp_name {
+                    font-size: 14px;
+                    text-decoration: underline;
+                    color: #292562;
+                }
+                .sp_specialisation {
+                    font-size: 14px;
+                    color: #ED1C7C;
+                }
+            }
+        }
+        .clinic {
+            .icon {
+                display: inline-block;
+                width: 22px;
+                height: 24px;
+                background-image: url('/clinic_icon.svg');
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+            .info {
+                display: inline-block;
+                .name, .address {
+                    font-size: 13px;
+                    color: #9199B4;
+                }
+            }
+        }
+        padding-bottom: 16px;
+        border-bottom: 1px dashed #DEE0E8;
+    }
+    .specialist_time {
+        display: block;
+        .container {
+            width: 100%;
+            padding-top: 16px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        &::-webkit-scrollbar {
+            opacity: 0;
+          }
+    }
+    &.mobile {
+        .specialist_info {
+            align-items: flex-start;
+            flex-direction: column;
+            .info {
+                display: flex;
+                .avatar {
+                    width: 50px;
+                    height: 50px;
+                    margin-right: 10px;
+                }
+                .specialist {
+                    width: calc(100% - 70px);
+                }
+            }
+            .clinic {
+                .name, .address {
+                    padding: 5px 0px;
+                }
+            }
+        }
+        .specialist_time {
+            overflow: auto;
+            width: 90vw;
+            .container {
+                flex-wrap: nowrap;
+            }
+        }
+    }
+}

@@ -1,0 +1,73 @@
+<div class="cont" [ngClass]="[isMobile ? 'mobile' : '']">
+    <div class="cont-item">
+        <div class="title">
+            <span>
+               {{ state.title }}
+            </span>
+        </div>
+        <div class="sub_title">
+            <span>
+                {{ state.sub_title }}
+            </span>
+        </div>
+        <div class="content">
+            @for (visit of state.bookings; track $index) {
+                <div class="doctors">
+                    <div class="doctor">
+                        <div class="title">
+                            <span> ექიმი </span>
+                        </div>
+                        <div class="name">
+                            <span>{{ visit.doctor.name }}</span> . <span>{{ visit.doctor.specialisation }}</span>
+                        </div>
+                    </div>
+                    <div class="clinic">
+                        <div class="title">
+                            <span> კლინიკა </span>
+                        </div>
+                        <div class="address">
+                            <div>{{ visit.clinic.name }}</div>
+                            <div>{{ visit.clinic.address }}</div>
+                        </div>
+                    </div>
+                    <div class="visitTime">
+                        <div class="visit_left_side">
+                            <div class="visitIcon"></div>
+                            <div class="visitInfo">
+                                @if (isMobile) {
+                                    <div class="visitDate">{{ visit.visitTime.day }} </div>
+                                    <div class="visitDate">{{ visit.visitTime.startTime }} - {{ visit.visitTime.endTime }} </div>
+                                } @else {
+                                    <div class="visitTitle">ვიზიტის დრო</div>
+                                    <div class="visitDate">{{ visit.visitTime.startTime }} - {{ visit.visitTime.endTime }} {{ visit.visitTime.day }} </div>
+                                }
+                            </div>
+                        </div>
+                        <div class="visitStatus approved">დაჯავშნილი</div>
+                    </div>
+                </div>
+            }
+            <div class="patient">
+                <div class="patientBox">
+                    <div class="patientIcon details"></div>
+                    <div class="patientInfo">
+                        <div class="patientTitle">დაზღვეული</div>
+                        <div class="patientData">{{ state.patient.name }} {{ state.patient.policeNumber }}</div>
+                    </div>
+                </div>
+                <div class="patientBox">
+                    <div class="patientIcon details"></div>
+                    <div class="patientInfo">
+                        <div class="patientTitle">საკონტაქტო</div>
+                        <div class="patientData">{{ state.patient.number }} {{ state.patient.mail }}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="buttons">
+            @for (btn of state.buttons; track $index) {
+                <div class="btn" [ngClass]="btn.type">{{ btn.text }}</div>
+            }
+        </div>
+    </div>
+</div>

@@ -1,0 +1,39 @@
+.cont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35px;
+    cursor: pointer;
+    .img {
+        width: 35px;
+        height: 35px;
+        background-position: center;
+        background-repeat: no-repeat;
+        transition: all ease-in-out .2s;
+        &.geo {
+            background-image: url('/geo.svg');
+        }
+        &.eng {
+            background-image: url('/eng.svg');
+        }
+    }
+    .text {
+        span {
+            padding-left: 10px;
+            font-size: 16px;
+            color: #000;
+            text-transform: uppercase;
+        }
+    }
+    .v_line {
+        width: 1px;
+        height: 40%;
+        background-color: #d9dfec;
+        margin-left: 20px;
+    }
+    &.mobile {
+        .v_line {
+            margin-left: 12px;
+        }
+    }
+}

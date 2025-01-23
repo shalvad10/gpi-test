@@ -1,0 +1,51 @@
+main {
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem;
+    box-sizing: border-box;
+    position: relative;
+  }
+  .calendar-content {
+    background: #F4F4FE8E 0% 0% no-repeat padding-box;
+    width: 100%;
+    height: 136px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-bottom: 3rem;
+    .content-item {
+      margin-bottom: 0;
+    }
+  }
+
+  .content-item {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 3rem;
+
+    ::ng-deep app-stepper {
+      width: 100%;
+    }
+  }
+
+  @media screen and (max-width: 650px) {
+    .content {
+      flex-direction: column;
+      width: max-content;
+    }
+
+    .divider {
+      height: 1px;
+      width: 100%;
+      background: var(--red-to-pink-to-purple-horizontal-gradient);
+      margin-block: 1.5rem;
+    }
+  }

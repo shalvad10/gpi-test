@@ -1,0 +1,12 @@
+<div class="cont">
+    <div class="btn">
+        <app-calendar-button [todaysDate]="todaysCustomDate"></app-calendar-button>
+    </div>
+    <div class="arrow left" [ngClass]="[disableLeftArrow ? 'disabled' : '']" (click)="prevWeek()"></div>
+    <div class="slider">
+        @for (day of displayedDays; track $index) {
+            <app-calendar-item [date]="day"></app-calendar-item>
+        }
+    </div>
+    <div class="arrow right" (click)="nextWeek()"></div>
+</div>

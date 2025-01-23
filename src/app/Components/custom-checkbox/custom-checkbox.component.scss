@@ -1,0 +1,30 @@
+.cont {
+    border: 1px solid #9199B4;
+    border-radius: 8px;
+    position: relative;
+    width: 100%;
+    margin: 10px;
+    padding-left: 15px;
+    height: 46px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+    input {
+      width: 19px;
+      height: 19px;
+      accent-color: #ED1C7C;
+    }
+    label {
+      font-size: 14px;
+      padding-left: 10px;
+    }
+
+    &.disabled {
+      background: #F2F2F5 0% 0% no-repeat padding-box;
+      border-color: #F2F2F5;
+      label {
+        color: #909090;
+      }
+    }
+}

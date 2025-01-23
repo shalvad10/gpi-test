@@ -1,0 +1,96 @@
+.cont {
+    border: 1px solid #9199B4;
+    border-radius: 8px;
+    position: relative;
+    width: 100%;
+    margin: 10px;
+    padding-left: 8px;
+    height: 56px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    box-sizing: border-box;
+    padding-right: 29px;
+    input {
+      width: 21px;
+      height: 21px;
+      accent-color: #ED1C7C;
+    }
+    .labels {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-direction: column;
+      padding-left: 10px;
+      label {
+        font-size: 13px;
+        color: #292562;
+      }
+      span {
+        font-size: 13px;
+        color: #9199B4;
+      }
+    }
+
+    &.disabled {
+      background: #F2F2F5 0% 0% no-repeat padding-box;
+      border-color: #F2F2F5;
+      label {
+        color: #909090;
+      }
+    }
+
+    &.withIcon {
+      justify-content: space-between;
+      .data {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        label {
+          font-size: 14px;
+          color: #292562;
+        }
+        .icon {
+          width: 40px;
+          height: 40px;
+          border-radius: 8px;
+          background-color: #2d2ee014;
+          background-repeat: no-repeat;
+          background-size: 50%;
+          background-position: center;
+          &.video_call {
+            background-image: url('/video_call.svg');
+          }
+          &.phone_call {
+            background-image: url('/phone_call.svg');
+          }
+          &.clinic_visit {
+            background-image: url('/clinic_visit.svg');
+          }
+        }
+      }
+    }
+
+    &.clinicData {
+      justify-content: space-between;
+      .data {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        label {
+          font-size: 14px;
+          color: #292562;
+        }
+        .img {
+          width: 40px;
+          height: 40px;
+          border-radius: 100%;
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+      }
+    }
+}

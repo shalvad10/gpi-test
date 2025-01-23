@@ -1,0 +1,213 @@
+.cont {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    box-sizing: border-box;
+    position: relative;
+
+    .cont-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        max-width: 450px;
+        margin-bottom: 3rem;
+
+        .icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 35%;
+            margin-bottom: 25px;
+
+            &.success {
+                background-color: #22A3361A;
+                background-image: url('/green_check.svg');
+            }
+            &.failed {
+                background-color: #E833331A;
+                background-image: url('/red_close.svg');
+            }
+        }
+        .title {
+            font-size: 16px;
+            color: #292562;
+            text-align: center;
+            margin-bottom: 4px;
+        }
+        .sub_title {
+            font-size: 14px;
+            color: #535081;
+            text-align: center;
+            margin-bottom: 35px;
+        }
+        .content {
+            border-top: 1px dashed #DEE0E8;
+            padding-top: 24px;
+            .doctors {
+                border-bottom: 1px dashed #DEE0E8;
+                padding-bottom: 20px;
+                margin-bottom: 20px;
+                .doctor {
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: center;
+                    flex-direction: column;
+                    .title {
+                        font-size: 12px;
+                        color: #9199B4;
+                    }
+                    .name {
+                        span {
+                            font-size: 13px;
+                            color: #292562;
+                        }
+                    }
+                }
+                .clinic {
+                    margin-top: 15px;
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: center;
+                    flex-direction: column;
+                    .title {
+                        font-size: 12px;
+                        color: #9199B4;
+                    }
+                    .address {
+                        div {
+                            font-size: 13px;
+                            color: #292562;
+                        }
+                    }
+                }
+                .visitTime {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-top: 17px;
+                    width: 100%;
+                    .visit_left_side {
+                        display: flex;
+                        justify-content: start;
+                        align-items: center;
+                        .visitIcon {
+                            width: 44px;
+                            height: 44px;
+                            border-radius: 10px;
+                            background-color: #FEEEF5;
+                            background-image: url('/calendar-today.svg');
+                            background-position: center;
+                            background-repeat: no-repeat;
+                            background-size: 45%;
+                        }
+                        .visitInfo {
+                            margin-left: 12px;
+                            .visitTitle {
+                                font-size: 12px;
+                                color: #9199B4;
+                            }
+                            .visitDate {
+                                font-size: 14px;
+                                font-weight: 500;
+                                color: #ED1C7C;
+                            }
+                        }
+                    }
+                    .visitStatus {
+                        border-radius: 12px;
+                        padding: 3px 5px;
+                        font-size: 14px;
+                        &.approved {
+                            background-color: #46C37626;
+                            color: #0B9521;
+                        }
+                        &.declined {
+                            background-color: #E8333326;
+                            color: #E83333;
+                        }
+                    }
+                }
+            }
+            .patient {
+                width: 100%;
+                border-radius: 10px;
+                background-color: #F8F8FE;
+                margin-top: 25px;
+                display: flex;
+                justify-content: center;
+                align-items: start;
+                flex-direction: column;
+                gap: 15px;
+                padding: 15px;
+                .patientBox {
+                    display: flex;
+                    justify-content: start;
+                    align-items: center;
+                    .patientIcon {
+                        width: 44px;
+                        height: 44px;
+                        border-radius: 10px;
+                        background-color: #FFFFFF;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-size: 45%;
+                        &.details {
+                            background-image: url('/shield-account.svg');
+                        }
+                    }
+                    .patientInfo {
+                        margin-left: 12px;
+                        .patientTitle {
+                            font-size: 12px;
+                            color: #9199B4;
+                        }
+                        .patientData {
+                            font-size: 14px;
+                            font-weight: 500;
+                            color: #292562;
+                        }
+                    }
+
+                }
+
+            }
+        }
+        .buttons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 25px;
+            margin-top: 32px;
+            .btn {
+                height: 35px;
+                font-size: 12px;
+                border-radius: 8px;
+                padding: 0px 10px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                
+                &.main {
+                    background-color: #EE2A7B;
+                    color: #FFFFFF;
+                }
+                
+                &.secondary {
+                    background: #FFFFFF 0% 0% no-repeat padding-box;
+                    box-shadow: 0px 3px 10px #2925621A;
+                    border: 1px solid #BEBDCF;
+                    color: #292562;
+                }
+            }
+        }
+    }
+
+}

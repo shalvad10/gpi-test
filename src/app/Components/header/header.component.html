@@ -1,0 +1,8 @@
+<header [ngClass]="[isMobile ? 'mobile' : '']">
+    <img src="/logo.svg" alt="Logo" class="logo">
+    <div class="right_box">
+        <app-language-swircher [isMobile]="isMobile"></app-language-swircher>
+        <app-circle-icon iconName="bell" [unread]="true"></app-circle-icon>
+        <app-user-panel [isMobile]="isMobile"></app-user-panel>
+    </div>
+</header>

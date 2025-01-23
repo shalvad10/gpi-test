@@ -1,0 +1,34 @@
+.cont {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    background-color: #F4F6FE;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .icon {
+        width: 19px;
+        height: 22px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        &.bell {
+            background-image: url('/bell.svg');
+        }
+        &.user {
+            background-image: url('/user.svg');
+        }
+    }
+
+    .unread_dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 100%;
+        position: absolute;
+        right: 0;
+        top: 0;
+        background-color: #EE2A7B;
+    }
+}
